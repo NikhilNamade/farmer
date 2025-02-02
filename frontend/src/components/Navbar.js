@@ -9,7 +9,7 @@ const Navbar = (props) => {
   const [Data, setData] = useState(null);
   const fetchuser = async () => {
     if (localStorage.getItem("token")) {
-      const response = await fetch("http://localhost:5000/api/auth/fetchbyid", {
+      const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/auth/fetchbyid", {
         method: "GET",
         headers: {
           "token": localStorage.getItem("token"),

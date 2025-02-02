@@ -36,7 +36,7 @@ const AddProduct = () => {
             formdata.append("productType", credentials.producttype)
             formdata.append("productImg", image)
 
-            const response = await fetch("http://localhost:5000/api/product/addproduct", {
+            const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/product/addproduct", {
                 method: "POST",
                 headers: {
                     "token": localStorage.getItem("token"),

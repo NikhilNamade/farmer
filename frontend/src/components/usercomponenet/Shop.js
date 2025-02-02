@@ -33,7 +33,7 @@ const Shop = () => {
   // fethc all shops
   const fetchshops = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/fetchshop", {
+      const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/auth/fetchshop", {
         method: "GET",
       });
       if (!response.ok) {

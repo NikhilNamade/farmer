@@ -10,7 +10,7 @@ const ShopProfile = () => {
     const [products, setProducts] = useState(null)
     const fetchuserbyid = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/auth/fetchbyid/${id}`, {
+            const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/auth/fetchbyid/${id}`, {
                 method: "GET",
             })
             const data = await response.json();
@@ -25,7 +25,7 @@ const ShopProfile = () => {
     }
     const fetchproductbyuserid = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/product/fetchuserid/${id}`, {
+            const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/product/fetchuserid/${id}`, {
                 method: "GET",
             })
             const data = await response.json();
@@ -46,7 +46,7 @@ const ShopProfile = () => {
         try {
             const formdata = new FormData();
             formdata.append("rating", rating)
-            const response = await fetch(`http://localhost:5000/api/auth/rate/${id}`, {
+            const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/auth/rate/${id}`, {
                 method: "POST",
                 body: formdata
             })
@@ -61,7 +61,7 @@ const ShopProfile = () => {
         }
     }
     const handlepreoderSubmit = async(id)=>{
-        const response = await fetch("http://localhost:5000/api/product/preorder",{
+        const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/product/preorder",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

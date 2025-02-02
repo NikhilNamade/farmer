@@ -7,11 +7,12 @@ const Map = () => {
     const [isApiLoaded, setIsApiLoaded] = useState(false);
     const [start, setStart] = useState([]);
     const { id } = useParams();
+    const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
     //fetch current location for you
     useEffect(() => {
         const getHighAccuracyLocation = async () => {
             const response = await fetch(
-                `https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDdMkZorM710vTA4g4zyn9G4wYSRQaQO7Q`,
+                `https://www.googleapis.com/geolocation/v1/geolocate?key=${API_KEY}`,
                 {
                     method: "POST",
                 }
@@ -27,7 +28,7 @@ const Map = () => {
 
     const fethcproductbyid = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/product/fetch/${id}`, {
+            const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/product/fetch/${id}`, {
                 method: "GET",
             });
             const data = await response.json();
@@ -86,7 +87,7 @@ const Map = () => {
 
     return (
         <LoadScript
-            googleMapsApiKey="AIzaSyDdMkZorM710vTA4g4zyn9G4wYSRQaQO7Q"
+            googleMapsApiKey= {API_KEY}
             onLoad={() => setIsApiLoaded(true)} // Mark API as loaded
         >
             <GoogleMap

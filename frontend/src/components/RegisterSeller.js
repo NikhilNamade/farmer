@@ -50,7 +50,7 @@ const RegisterSeller = () => {
                 formdata.append("profile", image);
                 formdata.append("location", JSON.stringify(location))
                 
-                const response = await fetch("http://localhost:5000/api/auth/seller", {
+                const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/auth/seller", {
                     method: "POST",
                     body: formdata,
                 })

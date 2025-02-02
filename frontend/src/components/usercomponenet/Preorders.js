@@ -6,7 +6,7 @@ const Preorders = () => {
   const handleStatus = async (status, id) => {
     const formdata = new FormData();
     formdata.append("Status", status)
-    const response = await fetch(`http://localhost:5000/api/product/updatestatus/${id}`, {
+    const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/product/updatestatus/${id}`, {
       method: "PUT",
       body: formdata
     })
@@ -19,7 +19,7 @@ const Preorders = () => {
     console.log(id);
   }
   const fetchpreorders = async () => {
-    const response = await fetch("http://localhost:5000/api/product/fetchpreodersbyowner", {
+    const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/product/fetchpreodersbyowner", {
       method: "GET",
       headers: {
         "token": localStorage.getItem("token"),

@@ -21,7 +21,7 @@ const Profile = () => {
   const open = async (id) => {
     const productupdateform = document.querySelector(".productupdateform");
     productupdateform.style.display = "block"
-    const response = await fetch(`http://localhost:5000/api/product/fetch/${id}`, {
+    const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/product/fetch/${id}`, {
       method: "GET",
     })
     const data = await response.json();
@@ -35,7 +35,7 @@ const Profile = () => {
   // delete product
   const deleteProduct = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/product/deleteproduct/${id}`, {
+      const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/product/deleteproduct/${id}`, {
         method: "DELETE",
       })
       alert("Product Deleted")
@@ -70,7 +70,7 @@ const Profile = () => {
   useEffect(() => {
     if (localStorage.getItem("token")) {
       const fetchuser = async () => {
-        const response = await fetch("http://localhost:5000/api/product/fetchpreodersbyconsumer", {
+        const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/product/fetchpreodersbyconsumer", {
           method: "GET",
           headers: {
             "token": localStorage.getItem("token"),
@@ -92,7 +92,7 @@ const Profile = () => {
   useEffect(() => {
     if (localStorage.getItem("token")) {
       const fetchuser = async () => {
-        const response = await fetch("http://localhost:5000/api/auth/fetchbyid", {
+        const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/auth/fetchbyid", {
           method: "GET",
           headers: {
             "token": localStorage.getItem("token"),
@@ -108,7 +108,7 @@ const Profile = () => {
   useEffect(() => {
     if (localStorage.getItem("token")) {
       const fetchproduct = async () => {
-        const response = await fetch("http://localhost:5000/api/product/fetchuserid", {
+        const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/product/fetchuserid", {
           method: "GET",
           headers: {
             "token": localStorage.getItem("token"),

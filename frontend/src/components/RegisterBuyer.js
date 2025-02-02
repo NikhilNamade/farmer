@@ -34,7 +34,7 @@ const RegisterBuyer = () => {
                     console.log(`${key}: ${value}`);
                 }
 
-                const response = await fetch("http://localhost:5000/api/auth/buyer", {
+                const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/auth/buyer", {
                     method: "POST",
                     body: formdata,
                 })

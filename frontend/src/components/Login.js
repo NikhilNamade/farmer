@@ -25,7 +25,7 @@ const Login = () => {
       const formdata = new FormData();
       formdata.append("email", credentials.email);
       formdata.append("password", credentials.password);
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/auth/login", {
         method: "POST",
         body: formdata
       })
@@ -48,7 +48,7 @@ const Login = () => {
         const formdata = new FormData();
         formdata.append("email", forgotcre.emailrp);
         formdata.append("password", forgotcre.passwordrp);
-        const response = await fetch("http://localhost:5000/api/auth/changepassword", {
+        const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/auth/changepassword", {
           method: "PUT",
           body: formdata
         })

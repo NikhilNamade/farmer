@@ -45,7 +45,7 @@ const RegisterVendor = () => {
                 formdata.append("password", credentials.password);
                 formdata.append("profile", image);
                 formdata.append("location", JSON.stringify(location))
-                const response = await fetch("http://localhost:5000/api/auth/vendor", {
+                const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/auth/vendor", {
                     method: "POST",
                     body: formdata,
                 })

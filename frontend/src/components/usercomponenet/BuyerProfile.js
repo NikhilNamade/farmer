@@ -13,7 +13,7 @@ const BuyerProfile = () => {
     useEffect(() => {
         if (localStorage.getItem("token")) {
             const fetchuser = async () => {
-                const response = await fetch("http://localhost:5000/api/product/fetchpreodersbyconsumer", {
+                const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/product/fetchpreodersbyconsumer", {
                     method: "GET",
                     headers: {
                         "token": localStorage.getItem("token"),
@@ -34,7 +34,7 @@ const BuyerProfile = () => {
     useEffect(() => {
         if (localStorage.getItem("token")) {
             const fetchuser = async () => {
-                const response = await fetch("http://localhost:5000/api/auth/fetchbyid", {
+                const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/auth/fetchbyid", {
                     method: "GET",
                     headers: {
                         "token": localStorage.getItem("token"),

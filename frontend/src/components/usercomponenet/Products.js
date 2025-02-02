@@ -45,7 +45,7 @@ const Products = () => {
   };
   //habdle preorder
   const handlepreoderSubmit = async (id) => {
-    const response = await fetch("http://localhost:5000/api/product/preorder", {
+    const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/product/preorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const Products = () => {
     }
   }
   const fetchallproduct = async () => {
-    const response = await fetch("http://localhost:5000/api/product/fetch", {
+    const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/product/fetch", {
       method: "GET",
     });
     const data = await response.json();
@@ -88,7 +88,7 @@ const Products = () => {
   }
   const fetchbyproducttype = async () => {
     if (productType) {
-      const response = await fetch(`http://localhost:5000/api/product/fetchbytype/${productType}`, {
+      const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/product/fetchbytype/${productType}`, {
         method: "GET",
       });
       const data = await response.json();
@@ -119,7 +119,7 @@ const Products = () => {
 
   const fetchbyproductname = async () => {
     if (productName && click) {
-      const response = await fetch(`http://localhost:5000/api/product/fetchbyname/${productName}`, {
+      const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/product/fetchbyname/${productName}`, {
         method: "GET",
       });
       const data = await response.json();
