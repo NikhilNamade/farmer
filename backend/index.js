@@ -5,9 +5,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors({
     origin: "https://farmer-gold.vercel.app",
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization', 'token'], // Add 'auth-token' to allowed headers
-    credentials: true
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 app.use(express.json());
 
