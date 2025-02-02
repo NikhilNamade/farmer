@@ -44,7 +44,7 @@ function App() {
       const formdata = new FormData();
       formdata.append("lat", location.lat);
       formdata.append("lng", location.lng);
-      const response = await fetch("http://localhost:5000/api/product/updatelocation", {
+      const response = await fetch("https://farmer-backend-8ww4.onrender.com/api/product/updatelocation", {
         method: "PUT",
         headers: {
           "token": localStorage.getItem("token"),
