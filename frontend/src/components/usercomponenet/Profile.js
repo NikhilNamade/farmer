@@ -55,7 +55,7 @@ const Profile = () => {
       formdata.append("quantity", credentials.quantity)
       formdata.append("unitType", credentials.unitType)
       formdata.append("productType", credentials.productType)
-      const response = await fetch(`http://localhost:5000/api/product/update/${id}`, {
+      const response = await fetch(`https://farmer-backend-8ww4.onrender.com/api/product/update/${id}`, {
         method: "PUT",
         body: formdata,
       })

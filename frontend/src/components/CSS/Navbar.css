@@ -1,0 +1,239 @@
+/* navbar Styling */
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 12vmin;
+    background-color: rgb(245, 250, 245);
+    border-bottom: 1px solid rgb(9, 9, 9);
+    padding: 0 2vmin;
+
+}
+
+.nav .logo {
+    width: 25%;
+}
+
+.nav .find {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vmin;
+    visibility: visible;
+}
+
+.nav .find input {
+    width: 50vmin;
+}
+
+.nav .userdata {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1vmin;
+    visibility: visible;
+}
+
+.nav .userdata img {
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 50%;
+}
+
+.nav .userdata button {
+    padding: 1vmin;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: all ease-in-out 0.5s;
+}
+
+.nav .userdata button:hover {
+    background-color: rgb(225, 255, 225);
+}
+
+.nav #showbar {
+    display: none;
+}
+
+.nav .role {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1vmin;
+    visibility: visible;
+}
+
+.nav .role button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: all ease-in-out 0.5s;
+}
+
+.nav .role button:hover {
+    background-color: rgb(225, 255, 225);
+}
+
+.nav .role .roleuser {
+    width: auto;
+    padding: 1vmin;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 16vmin
+}
+
+.nav .role .roleuser .userType {
+    padding: 1vmin;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    border-radius: 0.5vmin;
+}
+
+.nav .role .roleuser .userType:hover {
+    background-color: rgb(225, 255, 225);
+}
+
+.find i {
+    width: auto;
+    height: auto;
+    padding: 1vmin;
+    border: 1px solid black;
+    border-radius: 50%;
+    transition: all ease-in 0.5s;
+    cursor: pointer;
+}
+
+.find i:hover {
+    background-color: black;
+    color: white;
+}
+
+.Navbar {
+    visibility: visible;
+    position: fixed;
+    top: 12.1vmin;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(245, 250, 245);
+    padding: 5px;
+    border-bottom: 1px solid rgb(9, 9, 9);
+}
+
+ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    margin: 15px 55px;
+    font-size: 2vmin;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.Navbar ul li a {
+    color: black;
+}
+
+ul li select {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 2vmin;
+}
+.responsive{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(245, 250, 245);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vmin;
+}
+.responsive .navrs
+{
+    width: 100%;
+}
+.responsive .navrs .find{
+    width: 100%;
+    font-size: 3vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vmin;
+}
+.responsive .navrs .find input{
+    height: 5vmin;
+}
+.responsive .navrs .find input::placeholder{
+    font-size: 2vmin;
+}
+.responsive .navrs .userdata{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vmin;
+}
+.responsive .navrs .userdata p{
+    font-size: 2.5vmin;
+}
+.responsive .navrs .userdata img{
+    width: 15vmin;
+    height: 15vmin;
+    border-radius: 50%;
+}
+.responsive .navrs .userdata button{
+    background-color: white;
+    border: 1px solid black;
+}
+.responsive .Navbarrs{
+    width: 100%;
+    height: auto;
+    
+}
+.responsive .Navbarrs ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.responsive .Navbarrs select{
+    font-size: 2.5vmin;
+}
+.responsive .Navbarrs ul li a{
+    color: black;
+    font-size: 2.5vmin;
+}
+/* responsive */
+@media (min-width: 2000px) {
+    .nav .logo h1{
+        font-size: 2vmin;
+    }
+    .nav #showbar {
+        font-size: 3vmin;
+        display: block;
+    }
+    .nav .userdata{
+        visibility: hidden;
+    }
+    .nav .find{
+        visibility: hidden;
+    }
+     .Navbar{
+        visibility: hidden;
+    }
+}

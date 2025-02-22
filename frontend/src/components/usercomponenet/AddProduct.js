@@ -1,3 +1,4 @@
+import "../CSS/AddProduct.css"
 import React, { useRef, useState } from 'react'
 const AddProduct = () => {
     const inputref = useRef(null);
@@ -6,18 +7,6 @@ const AddProduct = () => {
     const handleOnchange = (e) => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value });
     }
-    // const addcurrentlocation = () => {
-    //     if (navigator.geolocation) {
-    //         navigator.geolocation.getCurrentPosition((position) => {
-    //             const { latitude, longitude } = position.coords;
-    //             console.log("Latitude:" + latitude + " Longitude:" + longitude);
-    //             setLocation({ lat: latitude, lng: longitude });
-    //             alert("Location Added");
-    //         })
-    //     } else {
-    //         console.error("Unable to add location");
-    //     }
-    // }
     const changeimg = (event) => {
         setimage(event.target.files[0]);
         console.log(image);

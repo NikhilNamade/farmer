@@ -1,3 +1,4 @@
+import  "../CSS/Product.css"
 import React, { useEffect, useState } from 'react'
 import { useAppContext } from "../context/createContext";
 import { useNavigate } from "react-router-dom"
@@ -161,15 +162,11 @@ const Products = () => {
     fetchbyproductname();
   }, [fetchbyproductname()])
   return (
-    <div style={{
-      position: "absolute",
-      top: "20vmin",
-      width: "100%",
-    }}>
-      <div className="products" style={{ width: "100%", height: "80vh", padding: "5vmin", display: "flex", alignItems: "center", justifyContent: "space-around", flexWrap: "wrap", flexDirection: "row" }}>
+    <div>
+      <div className="products">
         {products && products.length > 0 ? (
           products.map((product) => (
-            <div class="product" style={{ width: "45%", justifyContent: "space-between" }}>
+            <div class="product" >
               <div class="productpic">
                 <img src={product.productImg ? product.productImg : "https://cdn.pixabay.com/photo/2022/09/05/09/50/tomatoes-7433786_1280.jpg"} id="veggie" />
               </div>

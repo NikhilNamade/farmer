@@ -1,0 +1,84 @@
+.addproductbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.addproductbody .form-container {
+    background-color: rgb(245, 250, 245);
+    /* Slight opacity to let the background show */
+    border-radius: 1.5vmin;
+    padding: 2.5vmin;
+    width: auto;
+    box-shadow: 0 0.8vmin 1.5vmin rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    
+}
+
+.addproductbody .form-container h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 2vmin;
+}
+
+.addproductbody .form-container .box {
+    gap: 1vmin;
+}
+
+.addproductbody .form-group {
+    margin-bottom: 2vmin;
+}
+
+.addproductbody .form-group label {
+    font-size: 2vmin;
+    color: #555555;
+    display: block;
+    margin-bottom: 0.5vmin;
+}
+
+.addproductbody .form-group select {
+    border: 0;
+    outline: 0;
+    font-size: 2vmin;
+    padding: 1vmin;
+    border-radius: 1vmin;
+}
+
+.addproductbody .form-group input:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 0.5vmin rgba(74, 144, 226, 0.5);
+}
+
+.addproductbody .form-group button {
+    width: 100%;
+    padding: 1vmin;
+    font-size: 2vmin;
+    color: rgb(6, 5, 5);
+    background: #f3f7f3;
+    border: none;
+    border-radius: 0.8vmin;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: background 0.3s ease;
+}
+
+.addproductbody .form-group button:hover {
+    background: #0d0d0d;
+    color: white;
+}
+
+/* responsive */
+@media (max-width: 3000px) {
+    .addproductbody .form-container h2 {
+        font-size: 2.5vmin;
+    }
+    input{
+        padding: 1.5vmin;
+    }
+    input::placeholder{
+        font-size: 2.5vmin;
+    }
+}
